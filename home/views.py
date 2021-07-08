@@ -110,8 +110,9 @@ def register(request):
             profile = Profile()
             # profile = Profile.objects.get(email = form.cleaned_data.get("email"))
             profile.ngo = form.cleaned_data.get("ngo")
+            send_mail('Corona Rangers has some great news for you','Thank you',settings.EMAIL_HOST_USER,[f'{user.email}'],fail_silently=False)
             messages.success(request, 'Your account has been created! Please log in')
-            return redirect('http://127.0.0.1:8000/login')
+            return redirect('http://127.0.0.1:8000/login1')
     else:
         form = UserRegisterForm()
     return render(request, 'register.html', {'form': form})

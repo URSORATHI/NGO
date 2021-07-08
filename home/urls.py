@@ -18,21 +18,21 @@ urlpatterns = [
     path('register', views.register, name="register"),
     path('profile', views.profile, name="profile"),
     path('profile/<pk>/', ProfileView.as_view(), name='profile-view'),
-    path('login', auth_views.LoginView.as_view(template_name='login.html'), name="login"),
+    path('login1', auth_views.LoginView.as_view(template_name='login.html'), name="login1"),
     path('logout', auth_views.LogoutView.as_view(template_name='logout.html'), name="logout"),
     path('password-reset', 
          auth_views.PasswordResetView.as_view(template_name='password_reset.html'), 
          name="password-reset"),
 
-    path('password-reset-done', 
+    path('password-reset-done/done', 
          auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), 
          name="password_reset_done"),
 
-    path('password-reset-confirm/<uidb64>/<token>', 
+    path('password-reset-confirm/done/<uidb64>/<token>/', 
          auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'), 
          name="password_reset_confirm"),
 
-    path('password-reset-complete', 
+    path('password-complete', 
          auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'), 
          name="password_reset_complete"),
     

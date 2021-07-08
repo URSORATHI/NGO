@@ -32,15 +32,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-   
+    'home',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home.apps.HomeConfig',
-    'crispy_forms',
+    
 ]
 
 MIDDLEWARE = [
@@ -138,13 +138,6 @@ MAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'unnatisorathi21@gmail.com'
-EMAIL_HOST_PASSWORD = '21Unn*Rs'
+EMAIL_HOST_USER ="hackathonteam66@gmail.com"
+EMAIL_HOST_PASSWORD= "Hackteam@66"
 
-
-EMAIL_HOST= 'smtp.zoho.in'
-EMAIL_HOST_USER ='unnatisorathi21@gmail.com'
-EMAIL_HOST_PASSWORD='21Unn*Rs'
-EMAIL_PORT=587
-EMAIL_USE_TLS =True
-EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
